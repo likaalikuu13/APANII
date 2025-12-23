@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAPPY BIRTHDAY PUTRI WULANDARI SAYANGKU</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+<body class="overflow-hidden bg-black">
+
+<!-- SURPRISE -->
+<div id="surprise"
+  class="fixed inset-0 z-50 flex flex-col items-center justify-center
+         bg-gradient-to-br from-pink-600 via-rose-500 to-pink-400
+         text-white text-center px-6">
+
+  <!-- CONFETTI -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="confetti"></div>
+    <div class="confetti delay-200"></div>
+    <div class="confetti delay-500"></div>
+  </div>
+
+  <!-- TEXT -->
+  <h1
+    class="text-5xl md:text-6xl font-extrabold mb-4
+           animate-surprise drop-shadow-xl">
+    🎉 HAPPY BIRTHDAY 🎉
+  </h1>
+
+  <h2 class="text-3xl font-bold mb-6 animate-fadeIn">
+    Sayang ❤️
+  </h2>
+
+  <p class="text-lg opacity-90 mb-8 animate-fadeIn delay-300">
+    Goyangkan HP kamu untuk meniup lilin 🎂
+  </p>
+
+  <!-- CAKE -->
+  <div class="relative mt-4 animate-fadeIn delay-500">
+    <div id="flame"
+      class="absolute -top-8 left-1/2 -translate-x-1/2
+             w-4 h-4 bg-orange-400 rounded-full animate-ping">
+    </div>
+
+    <div class="absolute -top-6 left-1/2 -translate-x-1/2
+                w-2 h-8 bg-white rounded"></div>
+
+    <div class="w-52 h-28 bg-pink-200 rounded-b-3xl shadow-2xl"></div>
+  </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="mainContent"
+  class="hidden min-h-screen flex items-center justify-center
+         bg-gradient-to-br from-rose-100 to-pink-200
+         text-rose-700 text-center px-6">
+
+  <div class="animate-fadeUp">
+    <h2 class="text-4xl font-bold mb-4">Beautiful Memories 💕</h2>
+    <p class="max-w-md text-lg">
+      Selamat ulang tahun ya sayang 🤍  
+      Terima kasih sudah hadir dan bikin hidup aku lebih indah ✨
+    </p>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+let shaken = false;
+
+window.addEventListener("devicemotion", (event) => {
+  if (shaken) return;
+  const acc = event.accelerationIncludingGravity;
+  if (!acc) return;
+
+  const total =
+    Math.abs(acc.x) + Math.abs(acc.y) + Math.abs(acc.z);
+
+  if (total > 25) {
+    shaken = true;
+    blowCandle();
+  }
+});
+
+function blowCandle() {
+  document.getElementById("flame").classList.add("hidden");
+
+  setTimeout(() => {
+    document.getElementById("surprise").classList.add("hidden");
+    document.getElementById("mainContent").classList.remove("hidden");
+  }, 800);
+}
+</script>
+
+<!-- CUSTOM ANIMATIONS -->
+<style>
+@keyframes surprise {
+  0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(1.2) rotate(3deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); }
+}
+.animate-surprise {
+  animation: surprise 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+.delay-200 { animation-delay: .2s; }
+.delay-300 { animation-delay: .3s; }
+.delay-500 { animation-delay: .5s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp {
+  animation: fadeUp 1.2s ease;
+}
+
+/* CONFETTI */
+.confetti {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  animation: confetti 2s linear infinite;
+}
+@keyframes confetti {
+  0% { transform: translateX(0) translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateX(-200px) translateY(120vh) rotate(720deg); opacity: 0; }
+}
+</style>
+
+</body>
+
+<div id="intro" class="fixed inset-0 bg-rose-500 z-[999] flex items-center justify-center">
+  <h1 class="text-white text-4xl md:text-6xl font-dancing animate-pulse">
+    For My Only One 💖
+  </h1>
+</div>
+
+<script>
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+  }, 3000);
+};
+</script>
+
+<script>
+document.addEventListener("mousemove", e => {
+  const x = (window.innerWidth / 2 - e.pageX) / 40;
+  const y = (window.innerHeight / 2 - e.pageY) / 40;
+  document.querySelector(".hero-section").style.transform =
+    `translate(${x}px, ${y}px)`;
+});
+</script>
+
+
+
+<p id="secret" class="hidden text-center mt-6 text-rose-600 font-dancing text-2xl">
+  Aku mau nikah sama kamu 🤍
+</p>
+
+<script>
+let tap = 0;
+document.querySelector("h1").addEventListener("click", () => {
+  tap++;
+  if (tap === 5) {
+    document.getElementById("secret").classList.remove("hidden");
+  }
+});
+</script>
+
+<script>
+if (distance < 0) {
+  document.body.innerHTML = `
+    <div class="h-screen flex items-center justify-center bg-rose-600 text-white text-center">
+      <div>
+        <h1 class="text-5xl font-dancing mb-6">
+          Happy Birthday My Love 🎉
+        </h1>
+        <p class="text-xl">
+          Terima kasih sudah menjadi bagian hidupku 💖
+        </p>
+      </div>
+    </div>`;
+}
+</script>
+
+<div id="loader" class="fixed inset-0 bg-rose-600 z-[9999] flex flex-col items-center justify-center text-white">
+  <p id="loadingText" class="text-2xl font-dancing mb-4">
+    Loading our memories...
+  </p>
+  <div class="w-64 h-2 bg-white/30 rounded">
+    <div id="loadBar" class="h-full bg-white w-0 rounded"></div>
+  </div>
+</div>
+
+    <script>
+let load = 0;
+const bar = document.getElementById("loadBar");
+const loader = document.getElementById("loader");
+
+const interval = setInterval(() => {
+  load += 2;
+  bar.style.width = load + "%";
+  if (load >= 100) {
+    clearInterval(interval);
+    loader.style.display = "none";
+  }
+}, 40);
+</script>
+
+
+    <div class="hearts"></div>
+
+ <script>
+setInterval(() => {
+  const heart = document.createElement("span");
+  heart.innerHTML = "💗";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+  document.querySelector(".hearts").appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}, 500);
+</script>
+
+<script>
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+
+
+
+<button id="darkToggle"
+ class="fixed top-6 right-6 bg-black/70 text-white px-4 py-2 rounded-full">
+ 🌙
+</button>
+
+<script>
+document.getElementById("darkToggle").onclick = () => {
+  document.body.classList.toggle("dark");
+};
+</script>
+
+<script>
+const video = document.querySelector("video");
+video?.addEventListener("ended", () => {
+  document.querySelector(".love-letter")
+    .scrollIntoView({ behavior: "smooth" });
+});
+</script>
+
+
+    <custom-navbar></custom-navbar>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero-section h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-pink-200 to-rose-300 opacity-30 z-0"
+        ></div>
+        <div class="z-10 relative">
+          <h1
+  class="text-5xl md:text-7xl font-['Dancing_Script'] text-rose-600 mb-6 animate-bounce"
+>
+  HAPPY BIRTHDAY
+</h1>
+
+<div
+  class="text-4xl md:text-6xl font-['Dancing_Script'] text-rose-800 mb-8"
+  id="typed-name"
+></div>
+
+          <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
+            To the most beautiful soul I've ever known
+          </p>
+
+<!-- Foto -->
+<div class="mt-10 flex justify-center">
+  <img
+    src="photo/poto2.jpg"
+    alt="My Love"
+    class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-xl border-4 border-pink-300"
+  />
+</div>
+
+<button
+  onclick="openLetter()"
+  class="mt-8 px-8 py-3 bg-rose-500 text-white rounded-full shadow-lg hover:bg-rose-600 transition-all"
+>
+  💌 Buka Surat
+</button>
+
+<!-- Modal Surat -->
+<div
+  id="letterModal"
+  class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50"
+>
+  <div class="bg-white rounded-2xl p-8 max-w-md w-[90%] text-center animate-fade-in">
+    <h2 class="font-['Dancing_Script'] text-3xl text-rose-500 mb-4">
+      Untuk Sayangku 💖
+    </h2>
+
+    <p class="text-gray-700 leading-relaxed">
+      Selamat ulang tahun, cintaku.  
+      Terima kasih sudah hadir dan mewarnai hidup aku.  
+      Semoga setiap langkah kamu selalu dipenuhi bahagia,
+      dan aku bisa terus ada di samping kamu.  
+      Aku sayang kamu, hari ini, besok, dan selamanya 🤍
+    </p>
+
+    <button
+      onclick="closeLetter()"
+      class="mt-6 px-6 py-2 bg-rose-500 text-white rounded-full hover:bg-rose-600"
+    >
+      Tutup
+    </button>
+  </div>
+</div>
+
+<script>
+  function openLetter() {
+    document.getElementById("letterModal").classList.remove("hidden");
+    document.getElementById("letterModal").classList.add("flex");
+  }
+
+  function closeLetter() {
+    document.getElementById("letterModal").classList.add("hidden");
+    document.getElementById("letterModal").classList.remove("flex");
+  }
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+</style>
+
+
+
+  <!-- CSS CUSTOM -->
+  <style>
+    #musicBtn {
+      margin-top: 50px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+
+  <!-- TOMBOL -->
+  <button id="musicBtn">▶ Play Music</button>
+
+  <!-- AUDIO -->
+  <audio id="music" loop>
+    <source src="audio/audio1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- SCRIPT -->
+  <script>
+    const btn = document.getElementById("musicBtn");
+    const music = document.getElementById("music");
+
+    btn.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        btn.textContent = "⏸ Pause Music";
+      } else {
+        music.pause();
+        btn.textContent = "▶ Play Music";
+      }
+    });
+  </script>
+        </div>
+        <div class="absolute bottom-10 animate-bounce">
+            
+        </div>
+      </section>
+
+      <!-- Memories Section -->
+     <section class="py-24 bg-gradient-to-b from-white to-rose-50">
+  <div class="container mx-auto px-4">
+
+    <h2 class="text-5xl font-dancing text-center text-rose-600 mb-6">
+      Beautiful Memories 💞
+    </h2>
+
+    <p class="text-center text-gray-500 max-w-2xl mx-auto mb-16">
+      Setiap momen bersamamu adalah cerita yang ingin aku ingat selamanya
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Memory Card -->
+      <div class="memory-elite">
+        <div class="memory-media">
+          <video src="vidio/vid4.mp4" muted loop></video>
+        </div>
+        <div class="memory-content">
+          <span>📍 First Meet • 2023</span>
+          <h3>Hari Pertama Kita Bertemu</h3>
+          <p>
+            Dari semua pertemuan di dunia, aku bersyukur semesta memilihkan kamu.
+          </p>
+        </div>
+      </div>
+
+      <div class="memory-elite">
+        <div class="memory-media">
+          <video src="vidio/vid3.mp4" muted loop></video>
+        </div>
+        <div class="memory-content">
+          <span>☕ First Date</span>
+          <h3>Kencan Pertama</h3>
+          <p>
+            Kita bicara berjam-jam tanpa sadar waktu, dan aku tau ini berbeda.
+          </p>
+        </div>
+      </div>
+
+      <div class="memory-elite">
+        <div class="memory-media">
+          <video src="vidio/vid2.mp4" muted loop></video>
+        </div>
+        <div class="memory-content">
+          <span>💖 Together</span>
+          <h3>Akhirnya Bersama</h3>
+          <p>
+            Hari dimana aku yakin, kamu adalah rumah.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll(".memory-elite video").forEach(video => {
+  video.addEventListener("mouseenter", () => video.play());
+  video.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+</script>
+
+<section class="py-20 bg-rose-50">
+  <h2 class="text-4xl font-dancing text-center text-rose-600 mb-16">
+    OUR STORY 💞
+  </h2>
+
+  <div class="max-w-4xl mx-auto space-y-10">
+    <div class="flex gap-6">
+      <div class="text-rose-500 font-bold">📅 2023</div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        Hari pertama kita kenal, semuanya berubah 💗
+      </div>
+    </div>
+
+ <div class="flex gap-6">
+      <div class="text-rose-500 font-bold">📅 2024</div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        Hari pertama kita kenal, semuanya berubah 
+      </div>
+    </div>
+
+    <div class="flex gap-6">
+      <div class="text-rose-500 font-bold">💌 2025</div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        Kita mulai saling percaya dan mencintai
+      </div>
+    </div>
+  </div>
+</section>
+  
+      <!-- Love Letter Section -->
+      <section class="love-letter py-20 bg-rose-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-dancing text-center text-rose-600 mb-12">
+            My Love Letter
+          </h2>
+
+          <div
+            class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-rose-600"
+            ></div>
+            <div class="flex flex-col md:flex-row gap-8">
+              <div class="md:w-1/3">
+                <div
+                  class="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-rose-300"
+                >
+                  <img
+                    src="http://static.photos/love/320x240/4"
+                    alt="Putri Wulandari"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div class="md:w-2/3">
+                <div class="text-lg text-gray-700 leading-relaxed">
+                  <p class="mb-4">Dear Putri,</p>
+                  <p class="mb-4">
+                    On this special day, I want you to know how much you mean to
+                    me. Your smile brightens my darkest days, and your laughter
+                    is my favorite melody.
+                  </p>
+                  <p class="mb-4">
+                    Every moment with you feels like a beautiful dream I never
+                    want to wake up from. You've brought so much joy, love, and
+                    meaning into my life.
+                  </p>
+                  <p class="mb-4">
+                    As you celebrate another year of your wonderful life, I
+                    promise to cherish you, support you, and love you more with
+                    each passing day.
+                  </p>
+                  <p class="font-dancing text-2xl text-rose-600 mt-8">
+                    Forever Yours,
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p id="loveTyping" class="text-center text-xl max-w-2xl mx-auto mt-10"></p>
+
+<script>
+new Typed("#loveTyping", {
+  strings: [
+    "Aku bersyukur setiap hari karena dipertemukan dengan kamu.",
+    "Kamu bukan sekadar pacar, kamu rumah 🤍",
+    "Dan aku mau menua bareng kamu."
+  ],
+  typeSpeed: 40,
+  backSpeed: 20,
+  loop: true
+});
+</script>
+      </section>
+
+
+      
+      <!-- Video Message Section -->
+          
+      <section class="video-message py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-dancing text-center text-rose-600 mb-12">
+      SPECIAL FOR YOU LOVE
+    </h2>
+
+
+    <p class="font-semibold text-center">KAMU HARUS BUKA KUNCI PASSWORD INI DULU KALAU KAMU MAU TAU</p>
+    <P class="font-semibold text-center">PASSWORDNYA TANGGAL JADIAN KITA YA</P>
+    <!-- PASSWORD AREA -->
+<div id="passwordArea" class="flex flex-col items-center justify-center text-center">
+
+  <input
+    type="password"
+    id="password"
+    placeholder="Masukkan password"
+    class="px-4 py-2 rounded-lg border mb-4"
+  />
+  <br />
+  <button
+    onclick="checkPassword()"
+    class="bg-rose-500 text-white px-6 py-2 rounded-lg hover:bg-rose-600 transition"
+  >
+    Unlock Video
+  </button>
+</div>
+
+<div id="success" class="text-green-600 mt-4 hidden font-semibold items-center justify-center text-center">
+<p>KAMU BENAR!</p>
+</p>
+<p>SELAMAT MENONTON, TONTON SAMPAI HABIS YA 💖</p>
+</div>
+
+<p id="error" class="text-red-500 mt-3 hidden">
+  Password salah 💔
+</p>
+
+
+      <!-- VIDEO (AWALNYA DISEMBUNYIKAN) -->
+      <div
+        id="videoContainer"
+        class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mt-6 hidden"
+      >
+        <div class="w-full h-96 bg-gray-200 flex items-center justify-center">
+          <video
+            controls
+            style="width: 100%; max-width: 900px; border-radius: 12px"
+          >
+            <source src="vidio/vid2.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function checkPassword() {
+  const correctPassword = "020825";
+
+  const input = document.getElementById("password").value;
+  const video = document.getElementById("videoContainer");
+  const error = document.getElementById("error");
+  const success = document.getElementById("success");
+  const passwordArea = document.getElementById("passwordArea");
+
+  if (input === correctPassword) {
+    video.classList.remove("hidden");
+    success.classList.remove("hidden");
+    error.classList.add("hidden");
+    passwordArea.classList.add("hidden");
+  } else {
+    error.classList.remove("hidden");
+    success.classList.add("hidden");
+  }
+}
+</script>
+
+<section class="py-20 text-center">
+  <h2 class="text-3xl font-dancing text-rose-600 mb-8">
+    Kamu sayang aku gak?
+  </h2>
+
+  <div class="flex justify-center gap-6">
+    <button id="yesBtn" class="bg-rose-500 text-white px-6 py-3 rounded-full">
+      Sayang 💖
+    </button>
+    <button id="noBtn" class="bg-gray-300 px-6 py-3 rounded-full">
+      Gak
+    </button>
+  </div>
+</section>
+
+<script>
+document.getElementById("noBtn").addEventListener("mouseover", () => {
+  const btn = document.getElementById("noBtn");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 80 + "%";
+  btn.style.top = Math.random() * 80 + "%";
+});
+
+document.getElementById("yesBtn").onclick = () => {
+  alert("Aku tau kamu sayang aku 😘");
+};
+</script>
+
+<div class="fixed top-0 left-0 h-1 bg-rose-500" id="progress"></div>
+
+<script>
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+  const height = document.body.scrollHeight - window.innerHeight;
+  document.getElementById("progress").style.width =
+    (scrolled / height) * 100 + "%";
+});
+</script>
+
+
+<section class="py-20 bg-rose-50 text-center">
+  <h2 class="text-4xl font-dancing text-rose-600 mb-6">
+    Love Meter 💖
+  </h2>
+
+  <p class="mb-6">Klik untuk lihat seberapa besar cintaku ke kamu</p>
+
+  <button onclick="increaseLove()"
+    class="bg-rose-500 text-white px-6 py-3 rounded-full">
+    💗 Click Me
+  </button>
+
+  <div class="w-64 h-4 bg-gray-200 rounded-full mx-auto mt-6 overflow-hidden">
+    <div id="loveBar" class="h-full bg-rose-500 w-0 transition-all"></div>
+  </div>
+
+  <p id="loveText" class="mt-4 font-semibold"></p>
+</section>
+
+<script>
+let love = 0;
+function increaseLove() {
+  if (love < 100) {
+    love += 10;
+    document.getElementById("loveBar").style.width = love + "%";
+    document.getElementById("loveText").innerText =
+      love === 100 ? "CINTA INI TAK TERBATAS 💞" : `Love Level: ${love}%`;
+  }
+}
+</script>
+
+<p id="togetherTime" class="text-center text-xl mt-10"></p>
+
+<script>
+const startDate = new Date("2025-08-02");
+
+setInterval(() => {
+  const now = new Date();
+  const diff = now - startDate;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+  document.getElementById("togetherTime").innerText =
+    `Kita sudah bersama selama ${days} hari 💞`;
+}, 1000);
+</script>
+
+<div class="glass p-8 max-w-xl mx-auto">
+  Kamu adalah keputusan terbaik dalam hidup aku 💖
+</div>
+
+      <!-- Countdown Section -->
+      <section
+        class="countdown py-20 bg-gradient-to-br from-pink-200 to-rose-300"
+      >
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-4xl font-semibold text-center text-rose-600 mb-12">
+            YOUR BIRTH IS COMING!!!
+          </h2>
+
+          <div class="flex justify-center gap-4 md:gap-8">
+            <div class="countdown-box">
+              <div class="countdown-number" id="days">00</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="hours">00</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="minutes">00</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="seconds">00</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <!-- Confetti Effect -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+
+      // Initialize Typed.js for name animation
+      document.addEventListener("DOMContentLoaded", function () {
+  new Typed("#typed-name", {
+    strings: ["PUTRI WULANDARI", "MY LOVE", "MY EVERYTHING"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true,
+    showCursor: false // ⬅️ INI KUNCINYA
+  });
+});
+
+    </script>
+
+
+<div>
+<section class="py-20 text-center bg-rose-600 text-white">
+  <h2 class="text-4xl font-dancing mb-8">
+    Mau lanjut hidup bareng aku?
+  </h2>
+
+  <button onclick="accept()"
+    class="bg-white text-rose-600 px-8 py-3 rounded-full">
+    Iya 🤍
+  </button>
+</section>
+</div>
+<script>
+function accept() {
+  document.body.innerHTML = `
+    <div class="h-screen flex items-center justify-center bg-black text-white text-center">
+      <h1 class="text-5xl font-dancing">
+        Aku janji jaga kamu selamanya 💍
+      </h1>
+    </div>`;
+}
+</script>
+
+    <script>
+  const targetDate = new Date("April 8, 2026 00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.querySelector(".countdown").innerHTML =
+        "<h2>🎉 Happy Birthday My Love 💖</h2>";
+      return;
+    }
+
+    document.getElementById("days").innerText =
+      Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").innerText =
+      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("minutes").innerText =
+      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById("seconds").innerText =
+      Math.floor((distance % (1000 * 60)) / 1000);
+  }, 1000);
+</script>
+
+  </body>
+</html>
